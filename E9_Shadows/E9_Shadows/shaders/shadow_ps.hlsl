@@ -42,6 +42,7 @@ bool isInShadow(Texture2D sMap, float2 uv, float4 lightViewPosition, float bias)
 {
     // Sample the shadow map (get depth of geometry)
     float depthValue = sMap.Sample(shadowSampler, uv).r;
+
 	// Calculate the depth from the light.
     float lightDepthValue = lightViewPosition.z / lightViewPosition.w;
     lightDepthValue -= bias;
